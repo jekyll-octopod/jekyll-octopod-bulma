@@ -1,0 +1,20 @@
+# frozen_string_literal: true
+
+Gem::Specification.new do |spec|
+  spec.name          = "jekyll-octopod-bulma"
+  spec.version       = "0.1.0"
+  spec.authors       = ["Stefan Haslinger"]
+  spec.email         = ["stefan.haslinger@informatom.com"]
+
+  spec.summary       = %q{The Bulma + LineAwesome theme behind jekyll-octopod, gem-served}
+  spec.homepage      = "https://github.com/jekyll-octopod/jekyll-octopod-bulma"
+  spec.license       = "MIT"
+  spec.required_ruby_version = ">= 3.0"
+
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
+
+  spec.add_runtime_dependency "jekyll", "~> 4.0"
+
+  spec.add_development_dependency "bundler", ">= 2.1"
+  spec.add_development_dependency "rake", "~> 13.0"
+end
