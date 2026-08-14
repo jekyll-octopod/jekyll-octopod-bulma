@@ -172,6 +172,16 @@ $content-table-foot-cell-color: #{cv.getVar("text-strong")} !default;
       margin-bottom: 0.25em;
       margin-top: 0.25em;
 
+      // Without this, the outer "&:not(:first-child) { margin-top: 1em }" above wins on
+      // specificity (a pseudo-class counts like a class, so ".content ul:not(:first-child)"
+      // outranks ".content ul ul") whenever this nested list isn't its <li>'s first child
+      // element - e.g. any "* [a link](url)" item followed by a sub-list, where the <a> becomes
+      // the true first child. Repeating :not(:first-child) here matches that specificity so the
+      // intended tight nested spacing actually applies regardless of what precedes the sub-list.
+      &:not(:first-child) {
+        margin-top: 0.25em;
+      }
+
       ul {
         list-style-type: square;
       }
