@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-octopod-bulma"
-  spec.version       = "0.1.3"
+  spec.version       = "0.1.5"
   spec.authors       = ["Stefan Haslinger"]
   spec.email         = ["stefan.haslinger@informatom.com"]
 
